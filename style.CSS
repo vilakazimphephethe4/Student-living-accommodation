@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/*Navbar Section*/
+header {
+  background-color: #004aad;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: #ffcc00;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    display: none;
+    background-color: #004aad;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  nav ul li {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  nav.active {
+    display: block;
+  }
+}
+
+/*Home Section*/
+.home {
+  background: url("Westderne-images/Complex.jpg") center/cover no-repeat;
+  color: white;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.home p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*Properties Section*/
+.properties {
+  padding: 60px 20px;
+  text-align: center;
+}
+.properties h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.property {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.property:hover {
+  transform: translateY(-5px);
+}
+.property img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.property h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: #004aad;
+}
+.property p {
+  margin: 0 15px 20px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/*Services Section */
+.services {
+  background-color: #e9ecef;
+  padding: 60px 20px;
+  text-align: center;
+}
+.services h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.service {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.service h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+/*About Section */
+.about {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/*Contact Section*/
+.contact {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+.contact h2 {
+  margin-bottom: 20px;
+}
+.contact p {
+  max-width: 600px;
+  margin: 0 auto 15px;
+}
+.book-now {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #004aad;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.book-now:hover {
+  background-color: #ffd633;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  margin: 30px auto 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*Booking Form Section*/
+.booking {
+  background: #e9ecef;
+}
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.booking-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #004aad;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.booking-form button {
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+.booking-form button:hover {
+  background: #003580;
+}
+
+/*Footer Section*/
+footer {
+  background-color: #003580;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #007bff;
+}
+.social-icons a:nth-child(2):hover {
+  color: #e4405f;
+}
+
+/*Back to top button*/
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  transition: 0.3s;
+}
+#backToTop:hover {
+  background: #003580;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .home h1 {
+    font-size: 2rem;
+  }
+  .home h2 {
+    font-size: 1.2rem;
+  }
+  .home p {
+    font-size: 1rem;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .book-now {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/*General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f8;
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #222;
+}
+
+a {
+  display: inline-block;
+  margin: 15px auto;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #004a88;
+  text-decoration: underline;
+}
+
+/*Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery div {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery div:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*Gallery Images */
+.gal-images {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery div:hover .gal-images {
+  transform: scale(1.1);
+}
+
+/*Lightbox Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.close,
+.prev,
+.next {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.close {
+  top: 25px;
+  right: 45px;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+.prev,
+.next {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+.prev:hover,
+.next:hover {
+  color: #aaa;
+}
+
+.caption {
+  color: #f1f1f1;
+  font-size: 18px;
+  margin-top: 10px;
+}
