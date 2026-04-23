@@ -1,4 +1,4 @@
-// Sticky Navbar Scroll Effect
+// Sticky Navbar 
 const header = document.querySelector("header");
 if (header) {
   window.addEventListener("scroll", () => {
@@ -6,7 +6,7 @@ if (header) {
   });
 }
 
-// Mobile Menu Toggle
+// Mobile Menu 
 const menuToggle = document.getElementById("menuToggle");
 const navbar = document.getElementById("navbar");
 
@@ -27,7 +27,7 @@ if (backToTop) {
   });
 }
 
-// Smooth Scroll for Anchor Links
+// Smooth Scroll 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -55,6 +55,7 @@ const images = Array.from(document.querySelectorAll('.gal-images'));
 let currentIndex = 0;
 
 if (images.length > 0 && lightbox && lightboxImg) {
+  
   // Open Lightbox
   function openLightbox(index) {
     currentIndex = index;
@@ -109,5 +110,5 @@ if (images.length > 0 && lightbox && lightboxImg) {
   });
 }
 
-console.log("✅ Script loaded successfully");
+console.log("Script loaded successfully");
 
